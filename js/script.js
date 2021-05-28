@@ -8,24 +8,24 @@ var outputElement = document.getElementById('prezzo-treno');
 
 // inizio calcoli con il if
 
-if (age >= 18 && age<65){
-    var calcTicket = numberKm * 0.21;
+if (parseInt(age) >= 18 && age<65){
+    var calcTicket = parseInt(numberKm) * 0.21;
     outputElement.innerHTML = (calcTicket.toFixed(2)); 
 
-}else if (age<18){
-    var calcTicket = numberKm * 0.21;
+}else if (parseInt(age)<18){
+    var calcTicket = parseInt(numberKm) * 0.21;
     var discount = calcTicket * 0.20;
     var finalPrice = calcTicket - discount;
     outputElement.innerHTML = (finalPrice.toFixed(2));
 
-}else if (age>=65){
-    var calcTicket = numberKm * 0.21;
+}else if (parseInt(age)>=65){
+    var calcTicket = parseInt(numberKm) * 0.21;
     var scontoOver = calcTicket * 0.40;
     var finalOver = calcTicket - scontoOver;
     outputElement.innerHTML = (finalOver.toFixed(2));
 
 }else{
-    outputElement.innerHTML = 'Devi inserimi solo il numero dei km e della tua età altrimenti non funziono'
+    outputElement.innerHTML = 'Devi inserimi solo il numero dei km e della tua età, altrimenti non funziono'
 }
 
 
