@@ -3,3 +3,7 @@ alert('Se ha meno di 18 anni hai un 20% di sconto, mentre, se ne hai più di 65 
 
 var numberKm = ('Quanti km devi fare ?');
 var age = ('Quanti anni hai ?');
+
+var outputElement = document.getElementById('prezzo-treno');
+
+// inizio calcoli con il se
