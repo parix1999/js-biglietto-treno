@@ -11,4 +11,10 @@ var outputElement = document.getElementById('prezzo-treno');
 if (age >= 18 && age<65){
     var calcAdult = numberKm * 0.21;
     outputElement.innerHTML = (calcAdult.toFixed(2)); 
+
+}else if (age<18){
+    var priceMinorenni = numberKm * 0.21;
+    var discount = priceMinorenni * 0.20;
+    var finalPrice = priceMinorenni - discount;
+    outputElement.innerHTML = (finalPrice.toFixed(2));
 }
